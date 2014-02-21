@@ -13,7 +13,7 @@ from functools import update_wrapper
 
 import random
 import uuid
-
+import mongo
 
 
 import inspect
@@ -29,7 +29,8 @@ import json
 yts = gdata.youtube.service.YouTubeService()
 gp = GP.genderPredictor()
 gp.trainAndTest()
-
+record_db = mongo.connect()
+page_db = mongo.connect('page')
 
 def nocache(f):
     def new_func(*args, **kwargs):
@@ -95,8 +96,8 @@ def condition():
     )
 
 
-    
-def count_gender_on_page(uri):  
+
+def get_id_from_uri(uri):
     pos1 = uri.find("v=")
     pos2 = uri[pos1+1:len(uri)].find("&")
     if pos2!=-1:
@@ -106,8 +107,10 @@ def count_gender_on_page(uri):
         pos2 = len(uri)
     pos1 += 2  
     video_id = uri[pos1: pos2]
-    print pos1, pos2 
-    print uri, video_id
+    return video_id
+
+def count_gender_on_page(uri):  
+    video_id = get_id_from_uri(uri)
     print "#"+video_id+"#"
     ytfeed = yts.GetYouTubeVideoCommentFeed(video_id=video_id)
     names = [name.author[0].name.text  for name in ytfeed.entry]
@@ -133,25 +136,60 @@ def get_gender():
     return jsonify({"response": [male_ratio, female_ratio]})
 
 
+# need to store into mongo
+def get_geo():
+    return int(random.random()*100)
+
+
+@app.route('/get_page_config', methods=['GET', 'POST'])
+@crossdomain(origin='*')
+@nocache
+def get_page_config():
+    if request.method == 'POST':
+        "see if the page is in db already"
+        uri = json.loads(request.data)['uri']
+        page_id = get_id_from_uri(uri)
+        info = {}
+        print 'page id = ', page_id
+        if page_db.find({'_id': page_id}).count() == 0:
+            # insert here
+            male, female = count_gender_on_page(uri)
+            info['gender'] = {'male':male, 'female': female}   
+            info['geo'] = get_geo()
+            info['_id'] = page_id
+            print info
+            page_db.insert(info)
+        else:
+            info = [p for p in page_db.find({'_id': page_id})][0]
+            print 'retrival ', info
+        return jsonify(info)
+        """
+        uri = json.loads(request.data)['uri']
+        male_ratio, female_ratio = count_gender_on_page(uri)
+        return jsonify(
+                {"response": [male_ratio, female_ratio]}
+        )
+        """
+    return jsonify({"response": [male_ratio, female_ratio]})
+
+
 @app.route('/store', methods=['GET', 'POST'])
 @crossdomain(origin='*')
 @nocache
 def store():
     if request.method == 'POST':
         print request.data
+        print type(request.data)
+        print 'ready to insert'
+        record_db.insert(json.loads(request.data))
         return jsonify(
                 {"response": 1}
         )
+    else:
+        print 'here'
     return jsonify({"response":1})
 
 
-
-@app.route('/get_geo', methods=['GET'])
-@crossdomain(origin='*')
-@nocache
-def get_geo():
-    obj_to_return = {"geo": int(random.random()*100)}
-    return jsonify(obj_to_return)
 
 
 @app.route('/get_id_from_server')
