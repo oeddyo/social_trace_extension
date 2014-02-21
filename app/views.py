@@ -14,7 +14,15 @@ from functools import update_wrapper
 import random
 import uuid
 
-import social_trace_extension.predict_gender.genderPredictor as GP
+
+
+import inspect
+import os
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+os.sys.path.insert(0,parentdir) 
+import predict_gender.genderPredictor as GP
+
 import gdata.youtube.service
 import json
 
