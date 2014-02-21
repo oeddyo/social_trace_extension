@@ -1,0 +1,5 @@
+ * Running on http://127.0.0.1:5000/
+ * Restarting with reloader
+127.0.0.1 - - [21/Feb/2014 16:23:42] "POST /get_page_config HTTP/1.1" 200 -
+127.0.0.1 - - [21/Feb/2014 16:23:50] "POST /get_page_config HTTP/1.1" 200 -
+127.0.0.1 - - [21/Feb/2014 16:24:08] "POST /get_page_config HTTP/1.1" 200 -
