@@ -83,7 +83,9 @@ class genderPredictor():
 
 if __name__ == "__main__":
     gp = genderPredictor()
+    accuracy=gp.trainAndTest()
     
+    print gp.classify("james bond")
     cur_acc = 0.0
     n_run = 10
     for i in range(n_run):
@@ -94,5 +96,5 @@ if __name__ == "__main__":
         feats=gp.getMostInformativeFeatures(10)
         for feat in feats:
             print '\t%s = %s'%feat
-
+    
     print cur_acc*1.0/n_run  

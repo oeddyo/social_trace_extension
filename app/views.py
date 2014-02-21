@@ -14,6 +14,15 @@ from functools import update_wrapper
 import random
 import uuid
 
+import social_trace_extension.predict_gender.genderPredictor as GP
+import gdata.youtube.service
+import json
+
+yts = gdata.youtube.service.YouTubeService()
+gp = GP.genderPredictor()
+gp.trainAndTest()
+
+
 def nocache(f):
     def new_func(*args, **kwargs):
         resp = make_response(f(*args, **kwargs))
@@ -73,11 +82,68 @@ def hello_world():
 def condition():
     male_ratio = int(random.random() * 100)
     female_ratio = 100 - male_ratio
-
-    return jsonify({
-        'text': "followed by "+str(male_ratio)+"% male, "+str(female_ratio) + "% female"
-        }
+    return jsonify(
+            {"response": [male_ratio, female_ratio]}
     )
+
+
+    
+def count_gender_on_page(uri):  
+    pos1 = uri.find("v=")
+    pos2 = uri[pos1+1:len(uri)].find("&")
+    if pos2!=-1:
+        pos2 = pos2 + pos1 + 1
+        pos2 = min(pos2, len(uri))
+    else:
+        pos2 = len(uri)
+    pos1 += 2  
+    video_id = uri[pos1: pos2]
+    print pos1, pos2 
+    print uri, video_id
+    print "#"+video_id+"#"
+    ytfeed = yts.GetYouTubeVideoCommentFeed(video_id=video_id)
+    names = [name.author[0].name.text  for name in ytfeed.entry]
+    male = 0
+    female = 0
+    for name in names:
+        if gp.classify(name) == 'M':
+            male += 1
+        else:
+            female += 1
+    return male, female 
+    
+@app.route('/get_gender', methods=['GET', 'POST'])
+@crossdomain(origin='*')
+@nocache
+def get_gender():
+    if request.method == 'POST':
+        uri = json.loads(request.data)['uri']
+        male_ratio, female_ratio = count_gender_on_page(uri)
+        return jsonify(
+                {"response": [male_ratio, female_ratio]}
+        )
+    return jsonify({"response": [male_ratio, female_ratio]})
+
+
+@app.route('/store', methods=['GET', 'POST'])
+@crossdomain(origin='*')
+@nocache
+def store():
+    if request.method == 'POST':
+        print request.data
+        return jsonify(
+                {"response": 1}
+        )
+    return jsonify({"response":1})
+
+
+
+@app.route('/get_geo', methods=['GET'])
+@crossdomain(origin='*')
+@nocache
+def get_geo():
+    obj_to_return = {"geo": int(random.random()*100)}
+    return jsonify(obj_to_return)
 
 
 @app.route('/get_id_from_server')
@@ -86,6 +152,4 @@ def assign_id():
     _id = uuid.uuid4()
     print str(_id)
     return str(_id)
-
-
 
