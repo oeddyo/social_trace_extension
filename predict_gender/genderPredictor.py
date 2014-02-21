@@ -3,6 +3,8 @@
 """
 genderPredictor.py
 """
+import nltk
+nltk.download('cmudict')
 
 from nltk import NaiveBayesClassifier,classify
 from curses.ascii import isdigit
