@@ -49,6 +49,8 @@ class genderPredictor():
         
     def classify(self,name):
         feats=self._nameFeatures(name)
+        if(len(name.split())<=1):
+            return 'U'
         return self.classifier.classify(feats)
         
     def train(self,train_set):
@@ -88,6 +90,7 @@ if __name__ == "__main__":
     accuracy=gp.trainAndTest()
     
     print gp.classify("james bond")
+    print gp.classify("jamesbond")
     cur_acc = 0.0
     n_run = 10
     for i in range(n_run):

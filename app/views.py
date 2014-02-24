@@ -117,10 +117,13 @@ def count_gender_on_page(uri):
     male = 0
     female = 0
     for name in names:
-        if gp.classify(name) == 'M':
+        classfied_result = gp.classify(name)
+        if classfied_result == 'M':
             male += 1
-        else:
+        elif classfied_result == 'F':
             female += 1
+        else:
+            continue
     return male, female 
     
 @app.route('/get_gender', methods=['GET', 'POST'])
