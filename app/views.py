@@ -29,8 +29,11 @@ import json
 yts = gdata.youtube.service.YouTubeService()
 gp = GP.genderPredictor()
 gp.trainAndTest()
-record_db = mongo.connect()
+
+record_db = mongo.connect('record')
 page_db = mongo.connect('page')
+survey_db = mongo.connect('survey')
+
 
 def nocache(f):
     def new_func(*args, **kwargs):
@@ -85,17 +88,6 @@ def crossdomain(origin=None, methods=None, headers=None,
 def hello_world():
     return 'Hello World!'
 
-@app.route('/get_condition')
-@crossdomain(origin='*')
-@nocache
-def condition():
-    male_ratio = int(random.random() * 100)
-    female_ratio = 100 - male_ratio
-    return jsonify(
-            {"response": [male_ratio, female_ratio]}
-    )
-
-
 
 def get_id_from_uri(uri):
     pos1 = uri.find("v=")
@@ -125,24 +117,47 @@ def count_gender_on_page(uri):
         else:
             continue
     return male, female 
-    
-@app.route('/get_gender', methods=['GET', 'POST'])
+   
+
+def randomly_assign_condition():
+    condition_list = ['gender', 'location', 'empty']
+
+    first_category = random.randint(0, len(condition_list)-1)
+    print "random number = ", first_category
+    if first_category == 0:
+        second_category = random.randint(0, 2)  # add/normal/subtract
+        if second_category == 0:
+            return condition_list[0] + "_" + "more"
+        elif second_category == 1:
+            return condition_list[0] + "_" + "normal"
+        else:
+            return condition_list[0] + "_" + "less"
+    else:
+        return condition_list[first_category]
+
+
+@app.route('/store_survey', methods=['GET', 'POST'])
 @crossdomain(origin='*')
 @nocache
-def get_gender():
-    if request.method == 'POST':
-        uri = json.loads(request.data)['uri']
-        male_ratio, female_ratio = count_gender_on_page(uri)
-        return jsonify(
-                {"response": [male_ratio, female_ratio]}
-        )
-    return jsonify({"response": [male_ratio, female_ratio]})
+def store_survey():
+    from pprint import pprint
 
+    if request.method == 'POST':
+        print dir(request)
+        print request.form
+        print request.form.getlist('email')
+        print dir(request.form)
+        print request.form.to_dict()
+        condition = randomly_assign_condition()
+        d = request.form.to_dict()
+        d['condition'] = condition
+        survey_db.insert(d)
+        return "ok"
+    return "ok"
 
 # need to store into mongo
 def get_geo():
     return int(random.random()*100)
-
 
 @app.route('/get_page_config', methods=['GET', 'POST'])
 @crossdomain(origin='*')
@@ -151,30 +166,47 @@ def get_page_config():
     if request.method == 'POST':
         "see if the page is in db already"
         uri = json.loads(request.data)['uri']
+        user_id = json.loads(request.data)['user_id']
+
+        user_info = [s for s in survey_db.find({'user_id': user_id})]
+
+        if user_id == None or len(user_info) == 0:
+            print 'retuning survey needed...'
+            return jsonify({'response': 2})
+        else:
+            user_info = user_info[0]
+
+        user_gender = user_info['gender']
+        user_condition = user_info['condition']
         page_id = get_id_from_uri(uri)
         info = {}
-        print 'page id = ', page_id
-        if page_db.find({'_id': page_id}).count() == 0:
+
+        query = {"_id": {'page_id': page_id, 'user_id': user_id}}
+        if page_db.find(query).count() == 0:
             # insert here
             male, female = count_gender_on_page(uri)
-            info['gender'] = {'male':male, 'female': female}   
+            scale = 0.0
+
+            if user_gender == 'Male':
+                scale = male*1.0/(male+female)
+            else:
+                scale = female*1.0/(male+female)
+
+            info['gender'] = {'same_gender_scale':scale }
+            #info['gender'] = {'male':male, 'female': female} 
             info['geo'] = get_geo()
-            info['_id'] = page_id
-            print info
+            info['_id'] = {'page_id': page_id, 'user_id': user_id}
             page_db.insert(info)
         else:
-            info = [p for p in page_db.find({'_id': page_id})][0]
+            info = [p for p in page_db.find(query)][0]
             print 'retrival ', info
         return jsonify(info)
-        """
-        uri = json.loads(request.data)['uri']
-        male_ratio, female_ratio = count_gender_on_page(uri)
-        return jsonify(
-                {"response": [male_ratio, female_ratio]}
-        )
-        """
-    return jsonify({"response": [male_ratio, female_ratio]})
 
+
+# response
+# 0: successful
+# 1: fail
+# 2: need survey
 
 @app.route('/store', methods=['GET', 'POST'])
 @crossdomain(origin='*')
@@ -184,10 +216,15 @@ def store():
         print request.data
         print type(request.data)
         print 'ready to insert'
-        record_db.insert(json.loads(request.data))
+        
+        try:
+            record_db.insert(json.loads(request.data))
+        except:
+            print 'error inserting...'
         return jsonify(
-                {"response": 1}
+                {"response": 0}
         )
+
     else:
         print 'here'
     return jsonify({"response":1})
