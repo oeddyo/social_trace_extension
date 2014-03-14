@@ -14,7 +14,7 @@ def get_id_from_uri(uri):
     video_id = uri[pos1: pos2]
     return video_id
 
-def count_gender_on_page(uri):
+def count_gender_on_page(uri, user_gender):
     video_id = get_id_from_uri(uri)
     ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
     names = [name.author[0].name.text  for name in ytfeed.entry]
@@ -28,7 +28,20 @@ def count_gender_on_page(uri):
             female += 1
         else:
             continue
-    return male, female
+    if male+female == 0:
+        return 0, male, female
+
+    if user_gender == 'Male':
+        scale = male*1.0/(male+female)
+    else:
+        scale = female*1.0/(male+female)
+
+    print 'ok scale = ', scale
+    s = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    for i in range(len(s)-1):
+        if scale>=s[i] and scale<s[i+1]:
+            print 'returning: ', 'scale = ', i
+            return i, male, female
 
 def randomly_assign_condition():
     condition_list = ['gender', 'location', 'control']
@@ -46,4 +59,9 @@ def randomly_assign_condition():
         return condition_list[first_category]
 
 def get_geo():
-    return int(random.random()*100)
+    t = random.random()
+    s = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    for i in range(len(s)-1):
+        if t>s[i] and t<s[i+1]:
+            return i
+

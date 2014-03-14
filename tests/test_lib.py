@@ -22,7 +22,9 @@ def test_get_id_from_uri():
 
 def test_count_gender_on_page():
     url = "http://www.youtube.com/watch?v=kffacxfA7G4"
-    male, female = lib.count_gender_on_page(url)
+    scale, male, female = lib.count_gender_on_page(url, 'Male')
+    assert(male>0 and female>0)
+    scale, male, female = lib.count_gender_on_page(url, 'Female')
     assert(male>0 and female>0)
 
 
@@ -36,3 +38,5 @@ def test_randomly_assign_condition():
     control = count['control']
     assert( abs(gender-location)<=300  and abs(location-control)<=300 and abs(gender-control)<=300)
 
+    for key in count:
+        assert(count[key] > 0)

@@ -75,11 +75,17 @@ def hello_world():
 def store_survey():
     if request.method == 'POST':
         condition = randomly_assign_condition()
-        d = request.form.to_dict()
+        if request.json != None:
+            d = request.json
+        else:
+            d = request.form.to_dict()
+
+        print 'now d = ', d
         d['condition'] = condition
         survey_db = mongo.connect('survey')
-        survey_db.insert(d)
-        return json.dumps({"response": "OK"})
+        survey_db.insert(d, manipulate = False)
+        d['response'] = "OK"
+        return jsonify(d)
     return json.dumps({"response": "ERROR"})
 
 
@@ -89,12 +95,12 @@ def store_survey():
 def get_page_config():
     if request.method == 'POST':
         "see if the page is in db already"
-
-        uri = json.loads(request.data)['uri']
-        user_id = json.loads(request.data)['user_id']
+        uri = request.json['uri']
+        user_id = request.json['user_id']
 
         survey_db = mongo.connect('survey')
         user_info = [s for s in survey_db.find({'user_id': user_id})]
+        print user_info
         if len(user_info)<=0 or u'gender' not in user_info[0]:
             print 'Returning Need Survey'
             return json.dumps({'response': "Need Survey"})
@@ -109,33 +115,29 @@ def get_page_config():
 
         page_db = mongo.connect('page')
 
-        male, female = count_gender_on_page(uri)
-
-        if user_gender == 'Male':
-            scale = male*1.0/(male+female)
-        else:
-            scale = female*1.0/(male+female)
-
+        scale, male, female = count_gender_on_page(uri, user_gender)
+        print 'condition = ', user_condition
         print 'before', scale
         if user_condition == 'gender_less':
-            scale -= 0.2
+            scale -= 1
         elif user_condition == 'gender_more':
-            scale += 0.2
+            scale += 1
 
-        scale = min(scale, 1.0)
-        scale = max(scale, 0.0)
+        scale = max(scale, 0)
+        scale = min(scale, 4)
         print 'after', scale
-
+        info['response'] = "OK"
         query = {"_id": {'page_id': page_id, 'user_id': user_id}}
         if page_db.find(query).count() == 0:
             info['same_gender_scale'] = scale
+            info['gender'] = {'user_gender': user_gender, 'scale': scale, 'male_count': male, 'female_count':female}
             info['geo'] = get_geo()
             info['_id'] = {'page_id': page_id, 'user_id': user_id}
-            page_db.insert(info)
+            page_db.insert(info, manipulate=False)
         else:
             info = [p for p in page_db.find(query)][0]
         
-        return jsonify(info)
+        return json.dumps(info)
 
 @app.route('/store_record', methods=['GET', 'POST'])
 @crossdomain(origin='*')
@@ -143,6 +145,6 @@ def get_page_config():
 def store_record():
     if request.method == 'POST':
         record_db = mongo.connect('record')
-        record_db.insert(json.loads(request.data))
+        record_db.insert(request.json, manipulate=False)
         return json.dumps({'response': "OK"})
     return json.dumps({'response': "ERROR"})
