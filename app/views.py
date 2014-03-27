@@ -12,6 +12,7 @@ import json
 from lib import count_gender_on_page
 from lib import get_id_from_uri
 from lib import randomly_assign_condition
+from lib import get_video_info
 from lib import get_geo
 
 def nocache(f):
@@ -80,7 +81,6 @@ def store_survey():
         else:
             d = request.form.to_dict()
 
-        print 'now d = ', d
         d['condition'] = condition
         survey_db = mongo.connect('survey')
         survey_db.insert(d, manipulate = False)
@@ -100,7 +100,6 @@ def get_page_config():
 
         survey_db = mongo.connect('survey')
         user_info = [s for s in survey_db.find({'user_id': user_id})]
-        print user_info
         if len(user_info)<=0 or u'gender' not in user_info[0]:
             print 'Returning Need Survey'
             return json.dumps({'response': "Need Survey"})
@@ -111,34 +110,37 @@ def get_page_config():
         user_condition = user_info['condition']
         user_info['condition'] = user_condition
         page_id = get_id_from_uri(uri)
-        info = {'condition': user_condition}
+        page_info = {'condition': user_condition}
+        video_info = get_video_info(uri)
+
+
+        page_info['video_info'] = video_info
         page_db = mongo.connect('page')
 
         scale, male, female, error_code = count_gender_on_page(uri, user_gender)
-        info['error_code'] = error_code
+        page_info['error_code'] = error_code
 
-        print 'condition = ', user_condition
-        print 'before', scale
         if user_condition == 'gender_less':
             scale -= 1
         elif user_condition == 'gender_more':
             scale += 1
 
+
+
         scale = max(scale, 0)
         scale = min(scale, 4)
-        print 'after', scale
-        info['response'] = "OK"
+        page_info['response'] = "OK"
         query = {"_id": {'page_id': page_id, 'user_id': user_id}}
         if page_db.find(query).count() == 0:
-            info['same_gender_scale'] = scale
-            info['gender'] = {'user_gender': user_gender, 'scale': scale, 'male_count': male, 'female_count':female, 'error_code': error_code}
-            info['geo'] = get_geo()
-            info['_id'] = {'page_id': page_id, 'user_id': user_id}
-            page_db.insert(info, manipulate=False)
+            page_info['same_gender_scale'] = scale
+            page_info['gender'] = {'user_gender': user_gender, 'scale': scale, 'male_count': male, 'female_count':female, 'error_code': error_code}
+            page_info['geo'] = get_geo()
+            page_info['_id'] = {'page_id': page_id, 'user_id': user_id}
+            page_db.insert(page_info, manipulate=False)
         else:
-            info = [p for p in page_db.find(query)][0]
+            page_info = [p for p in page_db.find(query)][0]
         
-        return json.dumps(info)
+        return json.dumps(page_info)
 
 @app.route('/store_record', methods=['GET', 'POST'])
 @crossdomain(origin='*')

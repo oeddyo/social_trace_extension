@@ -22,9 +22,9 @@ def test_get_id_from_uri():
 
 def test_count_gender_on_page():
     url = "http://www.youtube.com/watch?v=kffacxfA7G4"
-    scale, male, female = lib.count_gender_on_page(url, 'Male')
+    scale, male, female, error_code = lib.count_gender_on_page(url, 'Male')
     assert(male>0 and female>0)
-    scale, male, female = lib.count_gender_on_page(url, 'Female')
+    scale, male, female, error_code = lib.count_gender_on_page(url, 'Female')
     assert(male>0 and female>0)
 
 

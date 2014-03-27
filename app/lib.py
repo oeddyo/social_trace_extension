@@ -15,6 +15,31 @@ def get_id_from_uri(uri):
     video_id = uri[pos1: pos2]
     return video_id
 
+
+def get_video_info(url):
+    video_id = get_id_from_uri(url)
+    try:
+        entry = app.yts.GetYouTubeVideoEntry(video_id=video_id)
+        erro_code = None
+    except gdata.service.RequestError, inst:
+        erro_code = inst[0]
+
+    video_info = {'title': None, 'published_on':None, 'description': None, 'category':None,  'tags': None, 'duration_seconds': None, 'geo': None,
+                  'view_count': None, 'rating': None}
+    if erro_code==None:
+        try:
+            video_info['title'] = entry.media.title.text
+            video_info['published_on'] = entry.published.text
+            video_info['description'] = entry.media.description.text
+            video_info['category'] = entry.media.category[0].text
+            video_info['tags'] = entry.media.keywords.text
+            video_info['duration_seconds'] = entry.media.duration.seconds
+            video_info['view_count'] = entry.statistics.view_count
+            video_info['rating'] = entry.rating.average
+        except:
+            pass
+    return video_info
+
 def count_gender_on_page(uri, user_gender):
     video_id = get_id_from_uri(uri)
     try:
@@ -37,17 +62,14 @@ def count_gender_on_page(uri, user_gender):
             continue
     if male+female == 0:
         return 0, male, female, error_code
-
     if user_gender == 'Male':
         scale = male*1.0/(male+female)
     else:
         scale = female*1.0/(male+female)
 
-    print 'ok scale = ', scale
     s = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
     for i in range(len(s)-1):
         if scale>=s[i] and scale<s[i+1]:
-            print 'returning: ', 'scale = ', i
             return i, male, female, error_code
 
 def randomly_assign_condition():
