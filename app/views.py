@@ -112,10 +112,11 @@ def get_page_config():
         user_info['condition'] = user_condition
         page_id = get_id_from_uri(uri)
         info = {'condition': user_condition}
-
         page_db = mongo.connect('page')
 
-        scale, male, female = count_gender_on_page(uri, user_gender)
+        scale, male, female, error_code = count_gender_on_page(uri, user_gender)
+        info['error_code'] = error_code
+
         print 'condition = ', user_condition
         print 'before', scale
         if user_condition == 'gender_less':
@@ -130,7 +131,7 @@ def get_page_config():
         query = {"_id": {'page_id': page_id, 'user_id': user_id}}
         if page_db.find(query).count() == 0:
             info['same_gender_scale'] = scale
-            info['gender'] = {'user_gender': user_gender, 'scale': scale, 'male_count': male, 'female_count':female}
+            info['gender'] = {'user_gender': user_gender, 'scale': scale, 'male_count': male, 'female_count':female, 'error_code': error_code}
             info['geo'] = get_geo()
             info['_id'] = {'page_id': page_id, 'user_id': user_id}
             page_db.insert(info, manipulate=False)

@@ -1,6 +1,7 @@
 __author__ = 'eddiexie'
 from app import app
 import random
+import gdata
 
 def get_id_from_uri(uri):
     pos1 = uri.find("v=")
@@ -16,7 +17,13 @@ def get_id_from_uri(uri):
 
 def count_gender_on_page(uri, user_gender):
     video_id = get_id_from_uri(uri)
-    ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
+    try:
+        ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
+        error_code = None
+    except gdata.service.RequestError, inst:
+        print 'API ERROR!', inst[0]
+        error_code = inst[0]
+        return 0, 0, 0, error_code
     names = [name.author[0].name.text  for name in ytfeed.entry]
     male = 0
     female = 0
@@ -29,7 +36,7 @@ def count_gender_on_page(uri, user_gender):
         else:
             continue
     if male+female == 0:
-        return 0, male, female
+        return 0, male, female, error_code
 
     if user_gender == 'Male':
         scale = male*1.0/(male+female)
@@ -41,7 +48,7 @@ def count_gender_on_page(uri, user_gender):
     for i in range(len(s)-1):
         if scale>=s[i] and scale<s[i+1]:
             print 'returning: ', 'scale = ', i
-            return i, male, female
+            return i, male, female, error_code
 
 def randomly_assign_condition():
     condition_list = ['gender', 'location', 'control']
