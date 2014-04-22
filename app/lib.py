@@ -3,10 +3,11 @@ from app import app
 import random
 import gdata
 
+
 def get_id_from_uri(uri):
     pos1 = uri.find("v=")
-    pos2 = uri[pos1+1:len(uri)].find("&")
-    if pos2!=-1:
+    pos2 = uri[pos1 + 1:len(uri)].find("&")
+    if pos2 != -1:
         pos2 = pos2 + pos1 + 1
         pos2 = min(pos2, len(uri))
     else:
@@ -20,13 +21,14 @@ def get_video_info(url):
     video_id = get_id_from_uri(url)
     try:
         entry = app.yts.GetYouTubeVideoEntry(video_id=video_id)
-        erro_code = None
+        error_code = None
     except gdata.service.RequestError, inst:
-        erro_code = inst[0]
+        error_code = inst[0]
 
-    video_info = {'title': None, 'published_on':None, 'description': None, 'category':None,  'tags': None, 'duration_seconds': None, 'geo': None,
+    video_info = {'title': None, 'published_on': None, 'description': None, 'category': None, 'tags': None,
+                  'duration_seconds': None, 'geo': None,
                   'view_count': None, 'rating': None}
-    if erro_code==None:
+    if error_code is None:
         try:
             video_info['title'] = entry.media.title.text
             video_info['published_on'] = entry.published.text
@@ -40,6 +42,7 @@ def get_video_info(url):
             pass
     return video_info
 
+
 def count_gender_on_page(uri, user_gender):
     video_id = get_id_from_uri(uri)
     try:
@@ -48,8 +51,12 @@ def count_gender_on_page(uri, user_gender):
     except gdata.service.RequestError, inst:
         print 'API ERROR!', inst[0]
         error_code = inst[0]
-        return 0, 0, 0, error_code
-    names = [name.author[0].name.text  for name in ytfeed.entry]
+        return 0, 0, 0, error_code, None
+
+    contents = [my_e.content.text for my_e in ytfeed.entry]
+    names = [name.author[0].name.text for name in ytfeed.entry]
+
+    comments = zip(names, contents)
     male = 0
     female = 0
     for name in names:
@@ -60,22 +67,23 @@ def count_gender_on_page(uri, user_gender):
             female += 1
         else:
             continue
-    if male+female == 0:
-        return 0, male, female, error_code
+    if male + female == 0:
+        return 0, male, female, error_code, comments
     if user_gender == 'Male':
-        scale = male*1.0/(male+female)
+        scale = male * 1.0 / (male + female)
     else:
-        scale = female*1.0/(male+female)
+        scale = female * 1.0 / (male + female)
 
     s = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-    for i in range(len(s)-1):
-        if scale>=s[i] and scale<s[i+1]:
-            return i, male, female, error_code
+    for i in range(len(s) - 1):
+        if scale >= s[i] and scale < s[i + 1]:
+            return i, male, female, error_code, comments
+
 
 def randomly_assign_condition():
     condition_list = ['gender', 'location', 'control']
 
-    first_category = random.randint(0, len(condition_list)-1)
+    first_category = random.randint(0, len(condition_list) - 1)
     if first_category == 0:
         second_category = random.randint(0, 2)  # add/normal/subtract
         if second_category == 0:
@@ -87,10 +95,12 @@ def randomly_assign_condition():
     else:
         return condition_list[first_category]
 
+
 def get_geo():
     t = random.random()
-    s = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
-    for i in range(len(s)-1):
-        if t>s[i] and t<s[i+1]:
+    # distribution is prone towards extream sides
+    s = [0, 0.3, 0.45, 0.55, 0.7, 1.0]
+    for i in range(len(s) - 1):
+        if t > s[i] and t < s[i + 1]:
             return i
 

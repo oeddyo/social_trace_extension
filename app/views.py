@@ -117,7 +117,7 @@ def get_page_config():
         page_info['video_info'] = video_info
         page_db = mongo.connect('page')
 
-        scale, male, female, error_code = count_gender_on_page(uri, user_gender)
+        scale, male, female, error_code, comments = count_gender_on_page(uri, user_gender)
         page_info['error_code'] = error_code
 
         if user_condition == 'gender_less':
@@ -130,6 +130,7 @@ def get_page_config():
         scale = max(scale, 0)
         scale = min(scale, 4)
         page_info['response'] = "OK"
+        page_info['comments'] = comments
         query = {"_id": {'page_id': page_id, 'user_id': user_id}}
         if page_db.find(query).count() == 0:
             page_info['same_gender_scale'] = scale
