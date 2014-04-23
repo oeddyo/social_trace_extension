@@ -55,7 +55,9 @@ def count_gender_on_page(uri, user_gender):
         return 0, 0, 0, error_code, None
 
     contents = [my_e.content.text for my_e in ytfeed.entry]
+    contents = ["" for t in contents if t is None]
     names = [name.author[0].name.text for name in ytfeed.entry]
+    names = ["" for t in names if t is None]
 
     comments = zip(names, contents)
     male = 0
