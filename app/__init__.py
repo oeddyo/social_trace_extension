@@ -24,7 +24,9 @@ app.gp.trainAndTest()
 print "before"
 import lib
 print 'testing info', lib.get_video_info("https://www.youtube.com/watch?v=NNihymK_XJA")
-video_id = "https://www.youtube.com/watch?v=NNihymK_XJA"
+uri = "https://www.youtube.com/watch?v=NNihymK_XJA"
+video_id = get_id_from_uri(uri)
+print 'id = ', video_id
 ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
 contents = [my_e.content.text for my_e in ytfeed.entry]
 print 'printing comments...', contents
