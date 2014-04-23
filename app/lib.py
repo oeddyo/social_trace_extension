@@ -97,7 +97,7 @@ def count_gender_on_page(uri, user_gender):
         print '3'
         scale = female * 1.0 / (male + female)
 
-    s = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    s = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0001]
     print 'scale = ', scale
     for i in range(len(s) - 1):
         if scale >= s[i] and scale < s[i + 1]:
