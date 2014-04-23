@@ -44,7 +44,6 @@ def get_video_info(url):
 
 
 def count_gender_on_page(uri, user_gender):
-    print 'fucking in here'
     video_id = get_id_from_uri(uri)
     try:
         ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
@@ -55,14 +54,25 @@ def count_gender_on_page(uri, user_gender):
         error_code = inst[0]
         return 0, 0, 0, error_code, None
 
+    contents = []
+    names = []
+    for my_e in ytfeed.entry:
+        try:
+            if my_e.content.text is not None and my_e.author[0].name.text is not None:
+                contents.append(my_e.content.text)
+                names.append(my_e.author[0].name.text)
+        except:
+            continue
+    """
     contents = [my_e.content.text for my_e in ytfeed.entry]
     contents = ["" for t in contents if t is None]
     names = [name.author[0].name.text for name in ytfeed.entry]
     names = ["" for t in names if t is None]
-
+    """
     print 'contents is ', contents, 'names is ',names
 
     comments = zip(names, contents)
+    print 'now comments = ', comments
     male = 0
     female = 0
     for name in names:
