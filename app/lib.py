@@ -69,10 +69,8 @@ def count_gender_on_page(uri, user_gender):
     names = [name.author[0].name.text for name in ytfeed.entry]
     names = ["" for t in names if t is None]
     """
-    print 'contents is ', contents, 'names is ',names
 
     comments = zip(names, contents)
-    print 'now comments = ', comments
     male = 0
     female = 0
     for name in names:
