@@ -117,7 +117,9 @@ def get_page_config():
         page_info['video_info'] = video_info
         page_db = mongo.connect('page')
 
+        print 'debug: 120 ', uri, user_gender
         scale, male, female, error_code, comments = count_gender_on_page(uri, user_gender)
+        print 'debug: 122 ', scale, male, female, error_code, comments
         page_info['error_code'] = error_code
 
         if user_condition == 'gender_less':
