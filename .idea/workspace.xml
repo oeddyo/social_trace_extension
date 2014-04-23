@@ -106,7 +106,7 @@
       <file leaf-file-name="lib.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="39" selection-start="3010" selection-end="3010" vertical-scroll-proportion="0.75">
+            <state line="9" column="4" selection-start="173" selection-end="173" vertical-scroll-proportion="0.29347825">
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -544,23 +544,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/app/lib.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/app/lib.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/app/lib.py</url>
-          <line>66</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="7" />
     </breakpoint-manager>
   </component>
@@ -670,7 +653,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="39" selection-start="3010" selection-end="3010" vertical-scroll-proportion="0.75">
+        <state line="9" column="4" selection-start="173" selection-end="173" vertical-scroll-proportion="0.29347825">
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>

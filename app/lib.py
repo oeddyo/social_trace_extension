@@ -63,12 +63,6 @@ def count_gender_on_page(uri, user_gender):
                 names.append(my_e.author[0].name.text)
         except:
             continue
-    """
-    contents = [my_e.content.text for my_e in ytfeed.entry]
-    contents = ["" for t in contents if t is None]
-    names = [name.author[0].name.text for name in ytfeed.entry]
-    names = ["" for t in names if t is None]
-    """
 
     comments = zip(names, contents)
     male = 0
@@ -82,19 +76,11 @@ def count_gender_on_page(uri, user_gender):
         else:
             continue
 
-    print 'All right'
-    print male + female
-
-
-
     if male + female == 0:
-        print '1'
         return 0, male, female, error_code, comments
     if user_gender == 'Male':
-        print '2'
         scale = male * 1.0 / (male + female)
     elif user_gender == 'Female':
-        print '3'
         scale = female * 1.0 / (male + female)
 
     s = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0001]
@@ -123,8 +109,8 @@ def randomly_assign_condition():
 def get_geo():
     t = random.random()
     # distribution is prone towards extream sides
-    s = [0, 0.3, 0.45, 0.55, 0.7, 1.0]
+    s = [0, 0.3, 0.45, 0.55, 0.7, 1.00001]
     for i in range(len(s) - 1):
-        if t > s[i] and t < s[i + 1]:
+        if t >= s[i] and t < s[i + 1]:
             return i
 
