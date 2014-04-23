@@ -7,7 +7,7 @@
     <ignored path="social_trace_extension.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1395955543135" ignored="false" />
-    <file path="/__init__.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398288569987" ignored="false" />
+    <file path="/__init__.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398288618185" ignored="false" />
     <file path="$PROJECT_DIR$/tests/test_lib/__init__.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394575167070" ignored="false" />
     <file path="/test_lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398287485492" ignored="false" />
     <file path="/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645684078" ignored="false" />
@@ -105,7 +105,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="22" selection-start="700" selection-end="700" vertical-scroll-proportion="0.73555166">
+            <state line="26" column="14" selection-start="608" selection-end="608" vertical-scroll-proportion="0.68301225">
               <folding />
             </state>
           </provider>
@@ -622,7 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="700" selection-end="700" vertical-scroll-proportion="0.73555166">
+        <state line="26" column="14" selection-start="608" selection-end="608" vertical-scroll-proportion="0.68301225">
           <folding />
         </state>
       </provider>
