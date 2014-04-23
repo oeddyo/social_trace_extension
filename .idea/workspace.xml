@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ea85c17-16c6-4a20-8f7c-652a79677f36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib.py" afterPath="$PROJECT_DIR$/app/lib.py" />
-    </list>
+    <list default="true" id="1ea85c17-16c6-4a20-8f7c-652a79677f36" name="Default" comment="" />
     <ignored path="social_trace_extension.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398288952508" ignored="false" />
