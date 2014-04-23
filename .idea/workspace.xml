@@ -105,7 +105,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="29" selection-start="742" selection-end="742" vertical-scroll-proportion="0.8695652">
+            <state line="26" column="54" selection-start="648" selection-end="648" vertical-scroll-proportion="0.8074534">
               <folding />
             </state>
           </provider>
@@ -622,7 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="29" selection-start="742" selection-end="742" vertical-scroll-proportion="0.8695652">
+        <state line="26" column="54" selection-start="648" selection-end="648" vertical-scroll-proportion="0.8074534">
           <folding />
         </state>
       </provider>
