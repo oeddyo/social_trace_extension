@@ -71,12 +71,11 @@ def count_gender_on_page(uri, user_gender):
     """
 
     comments = zip(names, contents)
+    print 'ok comments = ', comments
     male = 0
     female = 0
     for name in names:
-        print 'looing at name ', name
         classfied_result = app.gp.classify(name)
-        print 'classified result = ', classfied_result
         if classfied_result == 'M':
             male += 1
         elif classfied_result == 'F':
