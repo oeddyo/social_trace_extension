@@ -45,6 +45,7 @@ def get_video_info(url):
 
 def count_gender_on_page(uri, user_gender):
     video_id = get_id_from_uri(uri)
+    print 'OK OK id = ', video_id
     try:
         print 'HA'
         ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
