@@ -13,7 +13,7 @@
     <file path="/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645684078" ignored="false" />
     <file path="$PROJECT_DIR$/tests/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645693031" ignored="false" />
     <file path="$PROJECT_DIR$/app/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645722076" ignored="false" />
-    <file path="/lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398294005514" ignored="false" />
+    <file path="/lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398294097574" ignored="false" />
     <file path="/test_views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394820855114" ignored="false" />
     <file path="/mongo.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394822966090" ignored="false" />
     <file path="/Dummy.txt" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398287316507" ignored="false" />
@@ -106,7 +106,7 @@
       <file leaf-file-name="lib.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="35" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.32608697">
+            <state line="84" column="19" selection-start="2650" selection-end="2650" vertical-scroll-proportion="0.5869565">
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -670,7 +670,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="35" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.32608697">
+        <state line="84" column="19" selection-start="2650" selection-end="2650" vertical-scroll-proportion="0.5869565">
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>

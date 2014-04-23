@@ -71,7 +71,6 @@ def count_gender_on_page(uri, user_gender):
     """
 
     comments = zip(names, contents)
-    print 'ok comments = ', comments
     male = 0
     female = 0
     for name in names:
@@ -82,6 +81,8 @@ def count_gender_on_page(uri, user_gender):
             female += 1
         else:
             continue
+
+    print 'All right'
     if male + female == 0:
         return 0, male, female, error_code, comments
     if user_gender == 'Male':
