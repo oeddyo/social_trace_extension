@@ -83,11 +83,18 @@ def count_gender_on_page(uri, user_gender):
             continue
 
     print 'All right'
+    print male + female
+
+
+
     if male + female == 0:
+        print '1'
         return 0, male, female, error_code, comments
     if user_gender == 'Male':
+        print '2'
         scale = male * 1.0 / (male + female)
-    else:
+    elif user_gender == 'Female':
+        print '3'
         scale = female * 1.0 / (male + female)
 
     s = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
