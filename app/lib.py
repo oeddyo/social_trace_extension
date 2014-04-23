@@ -45,9 +45,7 @@ def get_video_info(url):
 
 def count_gender_on_page(uri, user_gender):
     video_id = get_id_from_uri(uri)
-    print 'OK OK id = ', video_id
     try:
-        print 'HA'
         ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
         error_code = None
     except gdata.service.RequestError, inst:
@@ -56,7 +54,6 @@ def count_gender_on_page(uri, user_gender):
         error_code = inst[0]
         return 0, 0, 0, error_code, None
 
-    print 'OK HERE'
     contents = [my_e.content.text for my_e in ytfeed.entry]
     contents = ["" for t in contents if t is None]
     names = [name.author[0].name.text for name in ytfeed.entry]

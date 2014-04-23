@@ -49,7 +49,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="55" selection-start="3757" selection-end="3757" vertical-scroll-proportion="0.0">
+            <state line="103" column="12" selection-start="3176" selection-end="3176" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -60,7 +60,7 @@
       <file leaf-file-name="lib.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="32" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.39544514">
+            <state line="51" column="8" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.51966876">
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -521,13 +521,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/app/views.py</url>
-          <line>119</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
   </component>
@@ -622,7 +615,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="55" selection-start="3757" selection-end="3757" vertical-scroll-proportion="0.0">
+        <state line="103" column="12" selection-start="3176" selection-end="3176" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -631,7 +624,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="32" selection-start="1528" selection-end="1528" vertical-scroll-proportion="0.39544514">
+        <state line="51" column="8" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.51966876">
           <folding>
             <element signature="e#24#43#0" expanded="true" />
           </folding>
