@@ -49,6 +49,7 @@ def count_gender_on_page(uri, user_gender):
         ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
         error_code = None
     except gdata.service.RequestError, inst:
+        print 'now video_id = ', video_id
         print 'API ERROR!', inst[0]
         error_code = inst[0]
         return 0, 0, 0, error_code, None

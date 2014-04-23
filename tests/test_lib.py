@@ -40,3 +40,5 @@ def test_randomly_assign_condition():
 
     for key in count:
         assert(count[key] > 0)
+
+
