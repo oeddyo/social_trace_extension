@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1ea85c17-16c6-4a20-8f7c-652a79677f36" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib.py" afterPath="$PROJECT_DIR$/app/lib.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analysis/stat.py" afterPath="$PROJECT_DIR$/analysis/stat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="social_trace_extension.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,11 +15,11 @@
     <file path="/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645684078" ignored="false" />
     <file path="$PROJECT_DIR$/tests/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645693031" ignored="false" />
     <file path="$PROJECT_DIR$/app/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645722076" ignored="false" />
-    <file path="/lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398294616133" ignored="false" />
+    <file path="/lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398624934328" ignored="false" />
     <file path="/test_views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394820855114" ignored="false" />
     <file path="/mongo.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394822966090" ignored="false" />
-    <file path="/Dummy.txt" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398287316507" ignored="false" />
-    <file path="/stat.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1397505191286" ignored="false" />
+    <file path="/Dummy.txt" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398624719044" ignored="false" />
+    <file path="/stat.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398441593010" ignored="false" />
     <file path="/a.dummy" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398292065233" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,30 +40,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mongo.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/mongo.py">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
+            <state line="77" column="37" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views.py">
+      <file leaf-file-name="test_lib.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="67" selection-start="3769" selection-end="3769" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/flask/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1835" column="0" selection-start="76604" selection-end="76604" vertical-scroll-proportion="0.0">
+            <state line="33" column="18" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,10 +97,19 @@
       <file leaf-file-name="lib.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="4" selection-start="173" selection-end="173" vertical-scroll-proportion="0.29347825">
+            <state line="95" column="0" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.45560747">
               <folding>
-                <element signature="e#24#43#0" expanded="true" />
+                <element signature="e#24#42#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stat.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analysis/stat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="106" column="35" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,10 +155,10 @@
         <option value="$PROJECT_DIR$/tests/__init__.py" />
         <option value="$PROJECT_DIR$/tests/test_views.py" />
         <option value="$PROJECT_DIR$/app/mongo.py" />
-        <option value="$PROJECT_DIR$/analysis/stat.py" />
         <option value="$PROJECT_DIR$/tests/test_lib.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/analysis/stat.py" />
         <option value="$PROJECT_DIR$/app/lib.py" />
       </list>
     </option>
@@ -260,7 +260,7 @@
       <PyConsoleSettings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Python.stat">
     <configuration default="false" name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -297,7 +297,9 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analysis/stat.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -428,11 +430,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run" />
-        <item index="1" class="java.lang.String" itemvalue="Python.lib" />
-        <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_lib" />
-        <item index="4" class="java.lang.String" itemvalue="Python.stat" />
+        <item index="0" class="java.lang.String" itemvalue="Python.stat" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run" />
+        <item index="2" class="java.lang.String" itemvalue="Python.lib" />
+        <item index="3" class="java.lang.String" itemvalue="Python.__init__" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test_lib" />
       </list>
     </recent_temporary>
   </component>
@@ -468,14 +470,14 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36973685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36973685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2856115" sideWeight="0.38157895" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29856116" sideWeight="0.35789475" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986842" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2856115" sideWeight="0.28947368" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29856116" sideWeight="0.27236843" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3276316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263158" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -558,37 +560,24 @@
         <state line="29" column="14" selection-start="640" selection-end="640" vertical-scroll-proportion="-1.5625" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analysis/stat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="15" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="15" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="45" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1835" column="0" selection-start="76604" selection-end="76604" vertical-scroll-proportion="0.0">
+        <state line="1835" column="0" selection-start="76604" selection-end="76604" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mongo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -596,13 +585,6 @@
     <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/werkzeug/debug/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="0" selection-start="3195" selection-end="3195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/BaseHTTPServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="339" column="0" selection-start="12510" selection-end="12510" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -621,6 +603,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/BaseHTTPServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="339" column="0" selection-start="12510" selection-end="12510" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/gdata/youtube/service.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="263" column="0" selection-start="10069" selection-end="10069" vertical-scroll-proportion="0.0">
@@ -635,27 +624,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mongo.py">
+    <entry file="file://$PROJECT_DIR$/analysis/stat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
+        <state line="106" column="35" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="18" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="67" selection-start="3769" selection-end="3769" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state line="77" column="37" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="173" selection-end="173" vertical-scroll-proportion="0.29347825">
+        <state line="95" column="0" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.45560747">
           <folding>
-            <element signature="e#24#43#0" expanded="true" />
+            <element signature="e#24#42#0" expanded="true" />
           </folding>
         </state>
       </provider>

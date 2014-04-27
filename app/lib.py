@@ -1,4 +1,5 @@
 __author__ = 'eddiexie'
+import numpy as np
 from app import app
 import random
 import gdata
@@ -93,7 +94,9 @@ def count_gender_on_page(uri, user_gender):
 def randomly_assign_condition():
     condition_list = ['gender', 'location', 'control']
 
-    first_category = random.randint(0, len(condition_list) - 1)
+    #first_category = random.randint(0, len(condition_list) - 1)
+    probability = [0.4, 0.4, 0.2]
+    first_category = np.argmax(np.random.random(1, probability))
     if first_category == 0:
         second_category = random.randint(0, 2)  # add/normal/subtract
         if second_category == 0:
