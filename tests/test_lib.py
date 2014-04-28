@@ -30,13 +30,13 @@ def test_count_gender_on_page():
 
 def test_randomly_assign_condition():
     count = {'gender_more':0, 'gender_less': 0, 'gender_normal':0, 'location':0, 'control':0}
-    for times in range(3000):
+    for times in range(10000):
         count[lib.randomly_assign_condition()] += 1
 
     gender = count['gender_more'] + count['gender_normal'] + count['gender_less']
     location = count['location']
     control = count['control']
-    assert( abs(gender-location)<=300  and abs(location-control)<=300 and abs(gender-control)<=300)
+    assert( abs(control - 2000)<=100  and abs(location-4000)<=100 and abs(gender-4000)<=100)
 
     for key in count:
         assert(count[key] > 0)

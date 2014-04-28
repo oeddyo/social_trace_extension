@@ -96,7 +96,7 @@ def randomly_assign_condition():
 
     #first_category = random.randint(0, len(condition_list) - 1)
     probability = [0.4, 0.4, 0.2]
-    first_category = np.argmax(np.random.random(1, probability))
+    first_category = np.argmax(np.random.multinomial(1, probability))
     if first_category == 0:
         second_category = random.randint(0, 2)  # add/normal/subtract
         if second_category == 0:
