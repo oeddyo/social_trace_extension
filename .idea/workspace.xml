@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ea85c17-16c6-4a20-8f7c-652a79677f36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib.py" afterPath="$PROJECT_DIR$/app/lib.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analysis/stat.py" afterPath="$PROJECT_DIR$/analysis/stat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
     </list>
     <ignored path="social_trace_extension.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398288952508" ignored="false" />
+    <file path="/views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398644342061" ignored="false" />
     <file path="/__init__.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398288618185" ignored="false" />
     <file path="$PROJECT_DIR$/tests/test_lib/__init__.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394575167070" ignored="false" />
     <file path="/test_lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398287485492" ignored="false" />
@@ -20,7 +18,7 @@
     <file path="/mongo.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394822966090" ignored="false" />
     <file path="/Dummy.txt" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398624719044" ignored="false" />
     <file path="/stat.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398441593010" ignored="false" />
-    <file path="/a.dummy" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398292065233" ignored="false" />
+    <file path="/a.dummy" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398644326060" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +38,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="37" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0">
+            <state line="121" column="8" selection-start="3802" selection-end="3802" vertical-scroll-proportion="0.3325301">
               <folding />
             </state>
           </provider>
@@ -94,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lib.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="lib.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="0" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.45560747">
+            <state line="52" column="8" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#24#42#0" expanded="true" />
               </folding>
@@ -156,10 +154,10 @@
         <option value="$PROJECT_DIR$/tests/test_views.py" />
         <option value="$PROJECT_DIR$/app/mongo.py" />
         <option value="$PROJECT_DIR$/tests/test_lib.py" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/analysis/stat.py" />
         <option value="$PROJECT_DIR$/app/lib.py" />
+        <option value="$PROJECT_DIR$/app/views.py" />
       </list>
     </option>
   </component>
@@ -638,19 +636,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="37" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="0" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.45560747">
+        <state line="52" column="8" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#24#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="8" selection-start="3802" selection-end="3802" vertical-scroll-proportion="0.3325301">
+          <folding />
         </state>
       </provider>
     </entry>
