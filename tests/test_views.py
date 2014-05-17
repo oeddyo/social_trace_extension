@@ -1,6 +1,8 @@
 __author__ = 'eddiexie'
 
 import app as ST
+from nose.plugins.attrib import attr
+
 import pymongo
 from flask import jsonify
 from flask import request
@@ -43,17 +45,17 @@ class TestViews:
         data = {'_id': self.test_record_id }
         assert("OK" == self.post_wapper("/store_record", data)['response'])
 
+    @attr('now')
     def test_get_page_config(self):
         collection = mongo.connect('survey')
         data_without_gender = copy.deepcopy(self.record_data)
         del data_without_gender['gender']
 
-        print 'returns = ', self.test_app.post("/store_survey", data=json.dumps(data_without_gender)).data
-        print dir(self.test_app.post("/store_survey", data=json.dumps(data_without_gender)))
+        #print 'returns = ', self.test_app.post("/store_survey", data=json.dumps(data_without_gender)).data
         assert('OK' == self.post_wapper("/store_survey", data_dic=data_without_gender)['response']) #insert survey without gender
         assert('Need Survey' in
                self.post_wapper("/get_page_config", data_dic = {
-                   'uri': "http://www.youtube.com/watch?v=kffacxfA7G4",
+                   'uri': "https://www.youtube.com/watch?v=lREZ6Bg_Y4E",
                    'user_id': self.test_user_id
                })['response']
         )
@@ -68,20 +70,19 @@ class TestViews:
             assert('OK' == self.post_wapper("/store_survey", data_dic=self.record_data)['response']) #insert survey without gender
             # now gender is in there. So should return info
             assert('same_gender_scale' in self.post_wapper("/get_page_config", data_dic={
-                'uri': "http://www.youtube.com/watch?v=kffacxfA7G4",
+                'uri': "https://www.youtube.com/watch?v=lREZ6Bg_Y4E",
                 'user_id': self.test_user_id
                 })
             )
             #second time it will retrival from db directly
             retrivaled_data = self.post_wapper("/get_page_config", data_dic={
-                'uri': "http://www.youtube.com/watch?v=kffacxfA7G4",
+                'uri': "http://www.youtube.com/watch?v=lREZ6Bg_Y4E",
                 'user_id': self.test_user_id
             })
             scales.add(retrivaled_data['same_gender_scale'])
-            assert (retrivaled_data['_id']['page_id'] == 'kffacxfA7G4')
+            assert (retrivaled_data['_id']['page_id'] == 'lREZ6Bg_Y4E')
             assert (retrivaled_data['_id']['user_id'] == self.test_user_id)
 
             collection.remove({'user_id': self.test_user_id})
             page_collection = mongo.connect("page")
             page_collection.remove()
-        assert(len(scales)>=2)

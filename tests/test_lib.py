@@ -22,23 +22,28 @@ def test_get_id_from_uri():
 
 def test_count_gender_on_page():
     url = "http://www.youtube.com/watch?v=kffacxfA7G4"
-    scale, male, female, error_code, _ = lib.count_gender_on_page(url, 'Male')
+    scale, male, female, error_code, _, gender_subcondition = lib.count_gender_on_page(url, 'Male')
     assert(male>0 and female>0)
-    scale, male, female, error_code, _ = lib.count_gender_on_page(url, 'Female')
+    scale, male, female, error_code, _, gender_subcondition = lib.count_gender_on_page(url, 'Female')
     assert(male>0 and female>0)
 
 
 def test_randomly_assign_condition():
-    count = {'gender_more':0, 'gender_less': 0, 'gender_normal':0, 'location':0, 'control':0}
+    #count = {'gender_more':0, 'gender_less': 0, 'gender_normal':0, 'location':0, 'control':0}
+    count = {'gender':0, 'location': 0, 'control': 0}
     for times in range(10000):
         count[lib.randomly_assign_condition()] += 1
 
-    gender = count['gender_more'] + count['gender_normal'] + count['gender_less']
+    #gender = count['gender_more'] + count['gender_normal'] + count['gender_less']
+    gender = count['gender']
     location = count['location']
     control = count['control']
-    assert( abs(control - 2000)<=100  and abs(location-4000)<=100 and abs(gender-4000)<=100)
 
+    assert count['gender'] == 10000
+    """
+    assert( abs(control - 2000)<=100  and abs(location-4000)<=100 and abs(gender-4000)<=100)
     for key in count:
         assert(count[key] > 0)
+    """
 
 

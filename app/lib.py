@@ -5,6 +5,11 @@ import random
 import gdata
 
 
+GENDER_MORE = "gender_new_more"
+GENDER_LESS = "gender_new_less"
+GENDER_NORMAL = "gender_new_normal"
+
+
 def get_id_from_uri(uri):
     pos1 = uri.find("v=")
     pos2 = uri[pos1 + 1:len(uri)].find("&")
@@ -43,9 +48,13 @@ def get_video_info(url):
             pass
     return video_info
 
+def get_gender_subcondition():
+    idx = random.randint(0, 2)
+    return [GENDER_LESS, GENDER_NORMAL, GENDER_MORE][idx]
 
 def count_gender_on_page(uri, user_gender):
     video_id = get_id_from_uri(uri)
+    gender_subcondition = get_gender_subcondition()
     try:
         ytfeed = app.yts.GetYouTubeVideoCommentFeed(video_id=video_id)
         error_code = None
@@ -53,7 +62,7 @@ def count_gender_on_page(uri, user_gender):
         print 'now video_id = ', video_id
         print 'API ERROR!', inst[0]
         error_code = inst[0]
-        return 0, 0, 0, error_code, None
+        return 0, 0, 0, error_code, None, gender_subcondition
 
     contents = []
     names = []
@@ -78,25 +87,39 @@ def count_gender_on_page(uri, user_gender):
             continue
 
     if male + female == 0:
-        return 0, male, female, error_code, comments
+        return 0, male, female, error_code, comments, gender_subcondition
     if user_gender == 'Male':
-        scale = male * 1.0 / (male + female)
+        ratio = male * 1.0 / (male + female)
     elif user_gender == 'Female':
-        scale = female * 1.0 / (male + female)
+        ratio = female * 1.0 / (male + female)
 
     s = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0001]
-    print 'scale = ', scale
     for i in range(len(s) - 1):
-        if scale >= s[i] and scale < s[i + 1]:
-            return i, male, female, error_code, comments
+        if ratio >= s[i] and ratio < s[i + 1]:
+            scale = i
+
+    if gender_subcondition == GENDER_LESS:
+        scale -= 1
+    elif gender_subcondition == GENDER_MORE:
+        scale += 1
+
+    scale = max(scale, 0)
+    scale = min(scale, 4)
+
+    return scale, male, female, error_code, comments, gender_subcondition
 
 
 def randomly_assign_condition():
     condition_list = ['gender', 'location', 'control']
 
     #first_category = random.randint(0, len(condition_list) - 1)
-    probability = [0.4, 0.4, 0.2]
+    probability = [1.0, 0, 0]
     first_category = np.argmax(np.random.multinomial(1, probability))
+
+
+    return condition_list[first_category]
+
+    """
     if first_category == 0:
         second_category = random.randint(0, 2)  # add/normal/subtract
         if second_category == 0:
@@ -107,7 +130,7 @@ def randomly_assign_condition():
             return condition_list[0] + "_" + "less"
     else:
         return condition_list[first_category]
-
+    """
 
 def get_geo():
     t = random.random()

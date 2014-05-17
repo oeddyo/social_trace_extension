@@ -95,9 +95,9 @@ def store_survey():
 def get_page_config():
     if request.method == 'POST':
         "see if the page is in db already"
+
         uri = request.json['uri']
         user_id = request.json['user_id']
-
         survey_db = mongo.connect('survey')
         user_info = [s for s in survey_db.find({'user_id': user_id})]
         if len(user_info)<=0 or u'gender' not in user_info[0]:
@@ -118,31 +118,22 @@ def get_page_config():
         page_db = mongo.connect('page')
 
         #print 'debug: 120 ', uri, user_gender
-        scale, male, female, error_code, comments = count_gender_on_page(uri, user_gender)
+        scale, male, female, error_code, comments, gender_subcondition = count_gender_on_page(uri, user_gender)
         #print 'debug: 122 ', scale, male, female, error_code, comments
         page_info['error_code'] = error_code
-
-        if user_condition == 'gender_less':
-            scale -= 1
-        elif user_condition == 'gender_more':
-            scale += 1
-
-
-
-        scale = max(scale, 0)
-        scale = min(scale, 4)
         page_info['response'] = "OK"
         page_info['comments'] = comments
         query = {"_id": {'page_id': page_id, 'user_id': user_id}}
+
         if page_db.find(query).count() == 0:
             page_info['same_gender_scale'] = scale
-            page_info['gender'] = {'user_gender': user_gender, 'scale': scale, 'male_count': male, 'female_count':female, 'error_code': error_code}
+            page_info['gender'] = {'user_gender': user_gender, 'scale': scale, 'male_count': male, 'female_count':female, 'error_code': error_code, 'subcondition': gender_subcondition}
             page_info['geo'] = get_geo()
             page_info['_id'] = {'page_id': page_id, 'user_id': user_id}
             page_db.insert(page_info, manipulate=False)
         else:
             page_info = [p for p in page_db.find(query)][0]
-        
+
         return json.dumps(page_info)
 
 @app.route('/store_record', methods=['GET', 'POST'])
