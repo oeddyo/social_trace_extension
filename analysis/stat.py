@@ -115,7 +115,7 @@ class Analyst:
                 location += 1
             else:
                 control += 1
-
+        print "Conditions: "
         print gender, location, control
     def distribution_of_dwell_time(self):
         print 'Distribution of time in minutes'

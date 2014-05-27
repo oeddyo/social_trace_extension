@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ea85c17-16c6-4a20-8f7c-652a79677f36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysis/names.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysis/csv_generator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysis/output.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/recrawl_youtube.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib.py" afterPath="$PROJECT_DIR$/app/lib.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analysis/stat.py" afterPath="$PROJECT_DIR$/analysis/stat.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_lib.py" afterPath="$PROJECT_DIR$/tests/test_lib.py" />
@@ -16,7 +12,7 @@
     <file path="/views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400293621031" ignored="false" />
     <file path="/__init__.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398288618185" ignored="false" />
     <file path="$PROJECT_DIR$/tests/test_lib/__init__.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394575167070" ignored="false" />
-    <file path="/test_lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400295300135" ignored="false" />
+    <file path="/test_lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1401208744005" ignored="false" />
     <file path="/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645684078" ignored="false" />
     <file path="$PROJECT_DIR$/tests/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645693031" ignored="false" />
     <file path="$PROJECT_DIR$/app/test_get_id_from_uri.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394645722076" ignored="false" />
@@ -24,7 +20,7 @@
     <file path="/test_views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400292163666" ignored="false" />
     <file path="/mongo.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394822966090" ignored="false" />
     <file path="/Dummy.txt" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400984970061" ignored="false" />
-    <file path="/stat.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398441593010" ignored="false" />
+    <file path="/stat.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1401207725502" ignored="false" />
     <file path="/a.dummy" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400464170547" ignored="false" />
     <file path="/run.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400296436543" ignored="false" />
     <file path="/small_test.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400290969289" ignored="false" />
@@ -77,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_lib.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="test_lib.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+            <state line="44" column="0" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.80851066">
               <folding />
             </state>
           </provider>
@@ -107,7 +103,7 @@
       <file leaf-file-name="stat.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analysis/stat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+            <state line="126" column="30" selection-start="3654" selection-end="3654" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -142,10 +138,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lib.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="lib.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="26" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.28723404">
+            <state line="115" column="26" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -190,12 +186,12 @@
         <option value="$PROJECT_DIR$/tests/test_views.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/app/mongo.py" />
-        <option value="$PROJECT_DIR$/analysis/stat.py" />
         <option value="$PROJECT_DIR$/app/recrawl_youtube.py" />
         <option value="$PROJECT_DIR$/app/nohup.out" />
         <option value="$PROJECT_DIR$/analysis/csv_generator.py" />
-        <option value="$PROJECT_DIR$/tests/test_lib.py" />
+        <option value="$PROJECT_DIR$/analysis/stat.py" />
         <option value="$PROJECT_DIR$/app/lib.py" />
+        <option value="$PROJECT_DIR$/tests/test_lib.py" />
       </list>
     </option>
   </component>
@@ -315,7 +311,7 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.csv_generator">
+  <component name="RunManager" selected="Python.stat">
     <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -479,9 +475,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.csv_generator" />
-        <item index="1" class="java.lang.String" itemvalue="Python.recrawl_youtube" />
-        <item index="2" class="java.lang.String" itemvalue="Python.stat" />
+        <item index="0" class="java.lang.String" itemvalue="Python.stat" />
+        <item index="1" class="java.lang.String" itemvalue="Python.csv_generator" />
+        <item index="2" class="java.lang.String" itemvalue="Python.recrawl_youtube" />
         <item index="3" class="java.lang.String" itemvalue="Python.run" />
         <item index="4" class="java.lang.String" itemvalue="Python.views" />
       </list>
@@ -662,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analysis/stat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="20" selection-start="2887" selection-end="2887" vertical-scroll-proportion="0.0">
@@ -710,16 +699,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
+    <entry file="file://$PROJECT_DIR$/analysis/stat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+        <state line="126" column="30" selection-start="3654" selection-end="3654" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="26" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.28723404">
+        <state line="115" column="26" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.80851066">
           <folding />
         </state>
       </provider>
