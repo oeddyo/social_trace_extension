@@ -113,7 +113,7 @@ def randomly_assign_condition():
     condition_list = ['gender', 'location', 'control']
 
     #first_category = random.randint(0, len(condition_list) - 1)
-    probability = [1.0, 0, 0]
+    probability = [0.6, 0.4, 0]
     first_category = np.argmax(np.random.multinomial(1, probability))
 
 

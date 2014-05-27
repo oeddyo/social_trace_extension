@@ -39,11 +39,6 @@ def test_randomly_assign_condition():
     location = count['location']
     control = count['control']
 
-    assert count['gender'] == 10000
-    """
-    assert( abs(control - 2000)<=100  and abs(location-4000)<=100 and abs(gender-4000)<=100)
-    for key in count:
-        assert(count[key] > 0)
-    """
+    assert( abs(location-5000)<=1000 and abs(gender-5000)<=1000)
 
 

@@ -18,9 +18,6 @@ class Analyst:
         # records by user
         self.user_records = self.get_user_records()
 
-
-
-
     def connect(self, c_name = 'record'):
         client = MongoClient('ec2-174-129-119-33.compute-1.amazonaws.com')
         # Test only on the test database!

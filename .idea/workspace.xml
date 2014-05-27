@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ea85c17-16c6-4a20-8f7c-652a79677f36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/small_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysis/names.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysis/csv_generator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysis/output.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/recrawl_youtube.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib.py" afterPath="$PROJECT_DIR$/app/lib.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analysis/stat.py" afterPath="$PROJECT_DIR$/analysis/stat.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_lib.py" afterPath="$PROJECT_DIR$/tests/test_lib.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_views.py" afterPath="$PROJECT_DIR$/tests/test_views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="social_trace_extension.iws" />
@@ -21,11 +23,30 @@
     <file path="/lib.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400293813470" ignored="false" />
     <file path="/test_views.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400292163666" ignored="false" />
     <file path="/mongo.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1394822966090" ignored="false" />
-    <file path="/Dummy.txt" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400288094108" ignored="false" />
+    <file path="/Dummy.txt" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400984970061" ignored="false" />
     <file path="/stat.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1398441593010" ignored="false" />
-    <file path="/a.dummy" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400295482340" ignored="false" />
+    <file path="/a.dummy" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400464170547" ignored="false" />
     <file path="/run.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400296436543" ignored="false" />
     <file path="/small_test.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400290969289" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/evaluate_ngrams.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400989042633" ignored="false" />
+    <file path="/evaluate_ngrams.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400521523780" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/ngram_gmm.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400861817270" ignored="false" />
+    <file path="/ngram_gmm.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400861748589" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/output_reader.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400512159087" ignored="false" />
+    <file path="/output_reader.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400512120097" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/data_util.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400861326057" ignored="false" />
+    <file path="/data_util.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400861326057" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/predict.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400989106568" ignored="false" />
+    <file path="/predict.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400867918361" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/data_photos.csv" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400527624324" ignored="false" />
+    <file path="/csv_generator.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1401070259208" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/Data/model_500000_4sqFalse__tweets_area_1.00_ratio_0.40_.pkl_prediction" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400790180384" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/Data/model_500000_4sqFalse__tweets_area_1.00_ratio_0.20_.pkl_prediction" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400791702759" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/Data/model_500000_4sqFalse__tweets_area_1.00_ratio_0.10_.pkl_prediction" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400791553841" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/CrystallBall/Data/model_500000_4sqFalse__tweets_area_5.00_ratio_0.20_.pkl_prediction" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400791734641" ignored="false" />
+    <file path="/recrawl_youtube.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400964656075" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/bin/~/PycharmProjects/tmp/lesson4.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400984856519" ignored="false" />
+    <file path="/lesson4.py" changelist="1ea85c17-16c6-4a20-8f7c-652a79677f36" time="1400984855214" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +69,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="20" selection-start="4561" selection-end="4561" vertical-scroll-proportion="0.0">
+            <state line="96" column="20" selection-start="2887" selection-end="2887" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -59,19 +80,8 @@
       <file leaf-file-name="test_lib.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="34" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0">
+            <state line="38" column="0" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="small_test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/small_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#24#35#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -88,38 +98,36 @@
       <file leaf-file-name="mongo.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mongo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/test_views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="33" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#25#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="case.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/nose/case.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="0" selection-start="6202" selection-end="6202" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="case.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
+      <file leaf-file-name="stat.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analysis/stat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="333" column="0" selection-start="11054" selection-end="11054" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="csv_generator.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analysis/csv_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="221" column="37" selection-start="7039" selection-end="7039" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#26#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nohup.out" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/nohup.out">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,8 +145,19 @@
       <file leaf-file-name="lib.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="0" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.52060735">
+            <state line="115" column="26" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.28723404">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recrawl_youtube.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/recrawl_youtube.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="0" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,14 +184,17 @@
         <option value="$PROJECT_DIR$/app/test_get_id_from_uri.py" />
         <option value="$PROJECT_DIR$/tests/__init__.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
-        <option value="$PROJECT_DIR$/analysis/stat.py" />
         <option value="$PROJECT_DIR$/tests/small_test.py" />
         <option value="$PROJECT_DIR$/app/small_test.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/tests/test_views.py" />
-        <option value="$PROJECT_DIR$/tests/test_lib.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/app/mongo.py" />
+        <option value="$PROJECT_DIR$/analysis/stat.py" />
+        <option value="$PROJECT_DIR$/app/recrawl_youtube.py" />
+        <option value="$PROJECT_DIR$/app/nohup.out" />
+        <option value="$PROJECT_DIR$/analysis/csv_generator.py" />
+        <option value="$PROJECT_DIR$/tests/test_lib.py" />
         <option value="$PROJECT_DIR$/app/lib.py" />
       </list>
     </option>
@@ -293,74 +315,7 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run">
-    <configuration default="false" name="Nosetest TestViews.test_get_page_config" type="tests" factoryName="Nosetests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="social_trace_extension" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_views.py" />
-      <option name="CLASS_NAME" value="TestViews" />
-      <option name="METHOD_NAME" value="test_get_page_config" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Nosetests in TestViews" type="tests" factoryName="Nosetests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="social_trace_extension" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_views.py" />
-      <option name="CLASS_NAME" value="TestViews" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="small_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="social_trace_extension" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/small_test.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.csv_generator">
     <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -394,6 +349,63 @@
       <module name="social_trace_extension" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="stat" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/analysis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="social_trace_extension" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analysis/stat.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="csv_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/analysis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="social_trace_extension" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analysis/csv_generator.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="recrawl_youtube" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="social_trace_extension" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/recrawl_youtube.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -459,19 +471,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetest TestViews.test_get_page_config" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in TestViews" />
-      <item index="2" class="java.lang.String" itemvalue="Python.small_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.views" />
-      <item index="4" class="java.lang.String" itemvalue="Python.run" />
+      <item index="0" class="java.lang.String" itemvalue="Python.views" />
+      <item index="1" class="java.lang.String" itemvalue="Python.run" />
+      <item index="2" class="java.lang.String" itemvalue="Python.stat" />
+      <item index="3" class="java.lang.String" itemvalue="Python.csv_generator" />
+      <item index="4" class="java.lang.String" itemvalue="Python.recrawl_youtube" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run" />
-        <item index="1" class="java.lang.String" itemvalue="Python.views" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest TestViews.test_get_page_config" />
-        <item index="3" class="java.lang.String" itemvalue="Python.small_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in TestViews" />
+        <item index="0" class="java.lang.String" itemvalue="Python.csv_generator" />
+        <item index="1" class="java.lang.String" itemvalue="Python.recrawl_youtube" />
+        <item index="2" class="java.lang.String" itemvalue="Python.stat" />
+        <item index="3" class="java.lang.String" itemvalue="Python.run" />
+        <item index="4" class="java.lang.String" itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -502,23 +514,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1436" height="878" extended-state="6" />
-    <editor active="false" />
+    <frame x="4" y="22" width="1436" height="878" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36939314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30647483" sideWeight="0.67546177" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32158273" sideWeight="0.6873351" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39973614" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30719423" sideWeight="0.27236843" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32453826" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3126649" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36939314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -602,80 +614,37 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/noserunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="3114" selection-end="3114" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/nose/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2067" selection-end="2067" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/nose/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="0" selection-start="6960" selection-end="6960" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/werkzeug/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="878" column="0" selection-start="33819" selection-end="33819" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="878" column="0" selection-start="33819" selection-end="33819" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="0" selection-start="9492" selection-end="9492" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1368476479000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1368476479000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="242" column="0" selection-start="9492" selection-end="9492" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Software/vir_env/lib/python2.7/site-packages/nose/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="0" selection-start="6202" selection-end="6202" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="196" column="0" selection-start="6202" selection-end="6202" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="333" column="0" selection-start="11054" selection-end="11054" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="333" column="0" selection-start="11054" selection-end="11054" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="33" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#25#41#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/small_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -693,34 +662,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mongo.py">
+    <entry file="file://$PROJECT_DIR$/analysis/stat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="34" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="20" selection-start="4561" selection-end="4561" vertical-scroll-proportion="0.0">
+        <state line="96" column="20" selection-start="2887" selection-end="2887" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/recrawl_youtube.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/nohup.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analysis/csv_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="37" selection-start="7039" selection-end="7039" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#26#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mongo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1302" selection-end="1302" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="0" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.52060735">
+        <state line="115" column="26" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.28723404">
           <folding />
         </state>
       </provider>
